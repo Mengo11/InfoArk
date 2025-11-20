@@ -8,7 +8,6 @@ import 'data_sources/boss_dinos.dart'; // Jefes
 final List<String> categories = [
   'voladores',
   'daño',
-  'farmers',
   'acuáticos',
   'boses',
 ];

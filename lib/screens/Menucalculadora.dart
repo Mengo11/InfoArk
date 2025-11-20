@@ -86,17 +86,6 @@ class CalculatorMenuPage extends StatelessWidget {
               },
             ),
             // Botón para la calculadora de cámara de clonación TEK
-            _buildButton(
-              context,
-              icon: 'assets/images/Fabricados/Clonadora.png',
-              label: 'Calculadora de Clonadora TEK',
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const CalculatorPage()),
-                );
-              },
-            ),
           ],
         ),
       ),

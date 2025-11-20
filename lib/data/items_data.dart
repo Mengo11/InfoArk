@@ -4,7 +4,7 @@ import '../data//models/ark_item.dart';
 final List<ArkItem> arkItems = [
   ArkItem(
     name: "Impresora Tek",
-    image: "impresora_tek.png",
+    image: "Impresora_Tek.png",
     resources: [
       Resource(name: "Lingote de Metal", image: "Lingote_de_metal.png", quantity: 5000),
       Resource(name: "Cristal", image: "Crystal.png", quantity: 600),
@@ -39,10 +39,10 @@ final List<ArkItem> arkItems = [
     image: "Forja.png",
     resources: [
       Resource(name: "Piedra", image: "Piedra.png", quantity: 125),
-      Resource(name: "Flint", image: "Flint.png", quantity: 5),
+      Resource(name: "Flint", image: "Flint.webp", quantity: 5), // Asumiendo que Flint es .webp
       Resource(name: "Piel", image: "Piel.png", quantity: 65),
       Resource(name: "Madera", image: "Madera.png", quantity: 20),
-      Resource(name: "Fibra", image: "Fibra.png", quantity: 40),
+      Resource(name: "Fibra", image: "Fibra.webp", quantity: 40), // Asumiendo que Fibra es .webp
     ],
   ),
   ArkItem(
@@ -73,8 +73,7 @@ final List<ArkItem> arkItems = [
       Resource(name: "Lingote de Metal", image: "Lingote_de_metal.png", quantity: 120),
       Resource(name: "Polimero", image: "Polimero.png", quantity: 15),
       Resource(name: "Cristal", image: "Crystal.png", quantity: 25),
-      Resource(name: "Electronicos", image: "electronicos.png", quantity: 1),
-
+      Resource(name: "Electronicos", image: "electronicos.png", quantity: 1), // Corregido: sin tilde
     ],
   ),
   ArkItem(
@@ -84,7 +83,7 @@ final List<ArkItem> arkItems = [
       Resource(name: "Lingote de Metal", image: "Lingote_de_metal.png", quantity: 225),
       Resource(name: "Cristal", image: "Crystal.png", quantity: 25),
       Resource(name: "Polimero", image: "Polimero.png", quantity: 60),
-      Resource(name: "Electronicos", image: "electronicos.png", quantity: 15),
+      Resource(name: "Electronicos", image: "electronicos.png", quantity: 15), // Corregido: sin tilde
     ],
   ),
   ArkItem(
@@ -93,7 +92,7 @@ final List<ArkItem> arkItems = [
     resources: [
       Resource(name: "Lingote de Metal", image: "Lingote_de_metal.png", quantity: 5),
       Resource(name: "Madera", image: "Madera.png", quantity: 15),
-      Resource(name: "Electronicos", image: "electronicos.png", quantity: 3),
+      Resource(name: "Electronicos", image: "electronicos.png", quantity: 3), // Corregido: sin tilde
     ],
   ),
   ArkItem(
@@ -101,7 +100,7 @@ final List<ArkItem> arkItems = [
     image: "Generador.png",
     resources: [
       Resource(name: "Lingote de Metal", image: "Lingote_de_metal.png", quantity: 25),
-      Resource(name: "Electronicos", image: "electronicos.png", quantity: 10),
+      Resource(name: "Electronicos", image: "electronicos.png", quantity: 10), // Corregido: sin tilde
     ],
   ),
   ArkItem(
@@ -117,11 +116,11 @@ final List<ArkItem> arkItems = [
   ),
   ArkItem(
     name: "Torreta Pesada",
-    image: "torreta_pesada.png",
+    image: "Torreta_pesada.png",
     resources: [
-      Resource(name: "Electronicos", image: "electronicos.png", quantity: 200),
-      Resource(name: "Lingote de Metal", image: "lingote_de_metal.png", quantity: 400),
-      Resource(name: "Cemento", image: "cemento.png", quantity: 150),
+      Resource(name: "Electronicos", image: "electronicos.png", quantity: 200), // Corregido: sin tilde
+      Resource(name: "Lingote de Metal", image: "Lingote_de_metal.png", quantity: 400), // Corregido: L mayúscula
+      Resource(name: "Cemento", image: "Cemento.png", quantity: 150), // Corregido: C mayúscula
       Resource(name: "Torreta Automática", image: "Torreta_automatica.png", quantity: 1),
     ],
   ),
@@ -132,17 +131,17 @@ final List<ArkItem> arkItems = [
       Resource(name: "Lingote de Metal", image: "Lingote_de_metal.png", quantity: 140),
       Resource(name: "Cemento", image: "Cemento.png", quantity: 50),
       Resource(name: "Polimero", image: "Polimero.png", quantity: 20),
-      Resource(name: "Electronicos", image: "electronicos.png", quantity: 70),
+      Resource(name: "Electronicos", image: "electronicos.png", quantity: 70), // Corregido: sin tilde
     ],
   ),
   ArkItem(
     name: "Torreta Tek",
-    image: "Torreta_tek.png",
+    image: "Torreta_Tek.png",
     resources: [
       Resource(name: "Lingote de Metal", image: "Lingote_de_metal.png", quantity: 100),
       Resource(name: "Cemento", image: "Cemento.png", quantity: 50),
       Resource(name: "Polimero", image: "Polimero.png", quantity: 50),
-      Resource(name: "Electronicos", image: "electronicos.png", quantity: 100),
+      Resource(name: "Electronicos", image: "electronicos.png", quantity: 100), // Corregido: sin tilde
       Resource(name: "Elemento", image: "Elemento.png", quantity: 3),
     ],
   ),
@@ -176,7 +175,7 @@ final List<ArkItem> arkItems = [
       Resource(name: "Lingote de Metal", image: "Lingote_de_metal.png", quantity: 900),
       Resource(name: "Cristal", image: "Crystal.png", quantity: 100),
       Resource(name: "Polimero", image: "Polimero.png", quantity: 175),
-      Resource(name: "Electronicos", image: "electronicos.png", quantity: 175),
+      Resource(name: "Electronicos", image: "electronicos.png", quantity: 175), // Corregido: sin tilde
       Resource(name: "Perlas negras", image: "Perlas_Negra.png", quantity: 45),
       Resource(name: "Elemento", image: "Elemento.png", quantity: 18),
     ],

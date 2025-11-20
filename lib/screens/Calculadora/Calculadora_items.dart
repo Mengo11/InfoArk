@@ -42,7 +42,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
   void calculateResources() {
     if (selectedItems.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Select at least one item')),
+        const SnackBar(content: Text('Seleccione al menos un objeto')),
       );
       return;
     }
@@ -84,7 +84,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
     showDialog(
       context: context,
       builder: (_) => AlertDialog(
-        title: const Text('Required Materials'),
+        title: const Text('Materiales necesarios'),
         content: SizedBox(
           width: double.maxFinite,
           child: ListView(
@@ -101,7 +101,8 @@ class _CalculatorPageState extends State<CalculatorPage> {
                 for (var res in entry.value.values)
                   ListTile(
                     leading: Image.asset(
-                      'assets/images/Fabricados/${res.image}',
+                      // ⬅️ CORRECCIÓN 1: Usar la carpeta 'Recurso' para los materiales
+                      'assets/images/Recurso/${res.image}',
                       width: 30,
                       errorBuilder: (_, __, ___) => const Icon(Icons.error),
                     ),
@@ -114,7 +115,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
               const Padding(
                 padding: EdgeInsets.symmetric(vertical: 8.0),
                 child: Text(
-                  'Total Resources',
+                  'Recursos totales que se nesecitan',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
               ),
@@ -134,7 +135,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Close'),
+            child: const Text('Cerrar'),
           ),
         ],
       ),
@@ -150,7 +151,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Resource Calculator'),
+        title: const Text('Calculadora de objetos'),
         centerTitle: true,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
@@ -170,7 +171,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
             TextField(
               onChanged: (value) => setState(() => searchQuery = value),
               decoration: InputDecoration(
-                hintText: 'Search item...',
+                hintText: 'Buscar item...',
                 filled: true,
                 fillColor: Colors.grey[800],
                 prefixIcon: const Icon(Icons.search),
@@ -207,7 +208,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
             if (selectedItems.isNotEmpty) ...[
               const Divider(height: 32),
               const Text(
-                'Selected Items',
+                'Selecciona un Items',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 8),
@@ -220,7 +221,8 @@ class _CalculatorPageState extends State<CalculatorPage> {
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                       child: ListTile(
                         leading: Image.asset(
-                          'assets/images/Recurso/${selected.item.image}',
+                          // ⬅️ CORRECCIÓN 2: Usar la carpeta 'Fabricados' para el ítem final.
+                          'assets/images/Fabricados/${selected.item.image}',
                           width: 40,
                           errorBuilder: (_, __, ___) => const Icon(Icons.error),
                         ),
@@ -254,7 +256,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
               ElevatedButton.icon(
                 onPressed: calculateResources,
                 icon: const Icon(Icons.calculate),
-                label: const Text('Calculate Materials'),
+                label: const Text('Calcular materiales'),
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                 ),

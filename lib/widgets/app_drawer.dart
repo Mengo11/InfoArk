@@ -52,11 +52,6 @@ class AppDrawer extends StatelessWidget {
       'icon': Icons.color_lens,
       'route': ColorsDyesPage(),
     },
-    {
-      'title': 'Boss',
-      'icon': Icons.pets,
-      'route': null,
-    },
   ];
 
   // Función para manejar la navegación
@@ -88,7 +83,7 @@ class AppDrawer extends StatelessWidget {
               children: [
                 const CircleAvatar(
                   radius: 20,
-                  backgroundImage: AssetImage('assets/images/Logo_ascendend.png'),
+                  backgroundImage: AssetImage('assets/images/logo_ascendend.webp'),
                   backgroundColor: Colors.grey,
                 ),
                 const SizedBox(width: 10),

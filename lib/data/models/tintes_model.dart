@@ -162,7 +162,7 @@ class TinteDataSource {
       name: 'Oliva',
       color: const Color(0xFF808000), // Olive
       description: 'Un tono militar y apagado, útil para estructuras defensivas.',
-      image: 'assets/images/Tintes/Color_Oliva.webp',
+      image: 'assets/images/Tintes/Color_Olivia.webp',
       ingredients: [
         _createIngredient('Amarberry', 12, _amarPath),
         _createIngredient('Narcoberry', 6, _narcoPath),
@@ -224,7 +224,7 @@ class TinteDataSource {
       name: 'Azul Marino',
       color: const Color(0xFF000080), // Navy Blue
       description: 'Un azul muy oscuro, casi negro, ideal para el océano profundo.',
-      image: 'assets/images/Tintes/Color_AzulMarino.webp',
+      image: 'assets/images/Tintes/Color_Azul_marino.webp',
       ingredients: [
         _createIngredient('Azulberry', 12, _azulPath),
         _createIngredient('Narcoberry', 6, _narcoPath),

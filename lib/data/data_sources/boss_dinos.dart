@@ -1,20 +1,21 @@
+// boss_dinos.dart (CORREGIDO: Rutas de Artefactos)
+
 import '../models/dinosaur.dart';
 import '../models/boss_info.dart';
 
 final List<Dinosaur> bossDinos = [
   // ----------------------------------------------------------------------
-  // 1. EL DRAGÓN (THE ISLAND) - Mantenido como referencia
+  // 1. EL DRAGÓN (THE ISLAND)
   // ----------------------------------------------------------------------
   Dinosaur(
     name: 'El Dragón',
-    categories: ['boses', 'the_island'],
-    imagePaths: ['assets/images/Dinos/Bosses/Dragon.webp'],
+    categories: ['boses', 'the_island', 'volaores'],
+    imagePaths: ['assets/images/Dinos/Boss/Dragon.webp'],
     description: 'Uno de los jefes más desafiantes. Su ataque de fuego es letal contra dinos con alta salud. Se invoca en un obelisco.',
 
-    // Configuración de Tameo y Combate
     isMountable: false,
-    damageBase: 99999, // Daño muy alto
-    healthBase: 432000, // HP del nivel Gamma
+    damageBase: 99999,
+    healthBase: 432000,
     preferredFoods: [],
     torporDrainInfo: 'Inmune',
     isShoulderPet: false,
@@ -28,11 +29,13 @@ final List<Dinosaur> bossDinos = [
           healthBase: 432000,
           elementReward: 200,
           requiredTributes: [
-            TributeRequirement(itemName: 'Allosaur Brain', quantity: 1, imagePath: 'assets/icons/tribute/allosaur_brain.png'),
-            TributeRequirement(itemName: 'Artifact of the Cunning', quantity: 1, imagePath: 'assets/icons/tribute/artifact_cunning.png'),
-            TributeRequirement(itemName: 'Artifact of the Immune', quantity: 1, imagePath: 'assets/icons/tribute/artifact_immune.png'),
-            TributeRequirement(itemName: 'Artifact of the Skylord', quantity: 1, imagePath: 'assets/icons/tribute/artifact_skylord.png'),
-            TributeRequirement(itemName: 'Artifact of the Strong', quantity: 1, imagePath: 'assets/icons/tribute/artifact_strong.png'),
+            // PARTES DE DINOS (RUTA PADRE: /Tributos/)
+            TributeRequirement(itemName: 'Sauropod Vertebra', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Sauropod_Vertebra.webp'),
+            // ARTEFACTOS (RUTA HIJA: /Tributos/Artifact/)
+            TributeRequirement(itemName: 'Artifact of the Cunning', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Cunning.webp'),
+            TributeRequirement(itemName: 'Artifact of the Immune', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Immune.webp'),
+            TributeRequirement(itemName: 'Artifact of the Skylord', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Skylord.webp'),
+            TributeRequirement(itemName: 'Artifact of the Strong', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Strong.webp'),
           ],
         ),
         BossDifficulty(
@@ -41,17 +44,18 @@ final List<Dinosaur> bossDinos = [
           healthBase: 864000,
           elementReward: 400,
           requiredTributes: [
-            TributeRequirement(itemName: 'Allosaur Brain', quantity: 5, imagePath: 'assets/icons/tribute/allosaur_brain.png'),
-            TributeRequirement(itemName: 'Basilosaurus Blubber', quantity: 5, imagePath: 'assets/icons/tribute/basilo_blubber.png'),
-            TributeRequirement(itemName: 'Giganotosaurus Heart', quantity: 5, imagePath: 'assets/icons/tribute/giga_heart.png'),
-            TributeRequirement(itemName: 'Tusoteuthis Tentacle', quantity: 5, imagePath: 'assets/icons/tribute/tuso_tentacle.png'),
-            TributeRequirement(itemName: 'Tyrannosaurus Arm', quantity: 5, imagePath: 'assets/icons/tribute/rex_arm.png'),
-            TributeRequirement(itemName: 'Yutyrannus Lungs', quantity: 5, imagePath: 'assets/icons/tribute/yuty_lungs.png'),
-            // Artefactos (se mantienen en 1)
-            TributeRequirement(itemName: 'Artifact of the Cunning', quantity: 1, imagePath: 'assets/icons/tribute/artifact_cunning.png'),
-            TributeRequirement(itemName: 'Artifact of the Immune', quantity: 1, imagePath: 'assets/icons/tribute/artifact_immune.png'),
-            TributeRequirement(itemName: 'Artifact of the Skylord', quantity: 1, imagePath: 'assets/icons/tribute/artifact_skylord.png'),
-            TributeRequirement(itemName: 'Artifact of the Strong', quantity: 1, imagePath: 'assets/icons/tribute/artifact_strong.png'),
+            // PARTES DE DINOS (RUTA PADRE: /Tributos/)
+            TributeRequirement(itemName: 'Allosaurus Brain', quantity: 5, imagePath: 'assets/images/Dinos/Boss/Tributos/Allosaurus_Brain.webp'),
+            TributeRequirement(itemName: 'Basilosaurus Blubber', quantity: 5, imagePath: 'assets/images/Dinos/Boss/Tributos/Basilosaurus_Blubber.webp'),
+            TributeRequirement(itemName: 'Giganotosaurus Heart', quantity: 5, imagePath: 'assets/images/Dinos/Boss/Tributos/Giganotosaurus_Heart.webp'),
+            TributeRequirement(itemName: 'Megalodon Tooth', quantity: 5, imagePath: 'assets/images/Dinos/Boss/Tributos/Megalodon_Tooth.webp'),
+            TributeRequirement(itemName: 'Tyrannosaurus Arm', quantity: 5, imagePath: 'assets/images/Dinos/Boss/Tributos/Tyrannosaurus_Arm.webp'),
+            TributeRequirement(itemName: 'Yutyrannus Lungs', quantity: 5, imagePath: 'assets/images/Dinos/Boss/Tributos/Yutyrannus_Lungs.webp'),
+            // ARTEFACTOS (RUTA HIJA: /Tributos/Artifact/)
+            TributeRequirement(itemName: 'Artifact of the Cunning', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Cunning.webp'),
+            TributeRequirement(itemName: 'Artifact of the Immune', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Immune.webp'),
+            TributeRequirement(itemName: 'Artifact of the Skylord', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Skylord.webp'),
+            TributeRequirement(itemName: 'Artifact of the Strong', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Strong.webp'),
           ],
         ),
         BossDifficulty(
@@ -60,17 +64,18 @@ final List<Dinosaur> bossDinos = [
           healthBase: 1296000,
           elementReward: 500,
           requiredTributes: [
-            TributeRequirement(itemName: 'Allosaur Brain', quantity: 10, imagePath: 'assets/icons/tribute/allosaur_brain.png'),
-            TributeRequirement(itemName: 'Basilosaurus Blubber', quantity: 20, imagePath: 'assets/icons/tribute/basilo_blubber.png'),
-            TributeRequirement(itemName: 'Giganotosaurus Heart', quantity: 10, imagePath: 'assets/icons/tribute/giga_heart.png'),
-            TributeRequirement(itemName: 'Tusoteuthis Tentacle', quantity: 10, imagePath: 'assets/icons/tribute/tuso_tentacle.png'),
-            TributeRequirement(itemName: 'Tyrannosaurus Arm', quantity: 15, imagePath: 'assets/icons/tribute/rex_arm.png'),
-            TributeRequirement(itemName: 'Yutyrannus Lungs', quantity: 10, imagePath: 'assets/icons/tribute/yuty_lungs.png'),
-            // Artefactos (se mantienen en 1)
-            TributeRequirement(itemName: 'Artifact of the Cunning', quantity: 1, imagePath: 'assets/icons/tribute/artifact_cunning.png'),
-            TributeRequirement(itemName: 'Artifact of the Immune', quantity: 1, imagePath: 'assets/icons/tribute/artifact_immune.png'),
-            TributeRequirement(itemName: 'Artifact of the Skylord', quantity: 1, imagePath: 'assets/icons/tribute/artifact_skylord.png'),
-            TributeRequirement(itemName: 'Artifact of the Strong', quantity: 1, imagePath: 'assets/icons/tribute/artifact_strong.png'),
+            // PARTES DE DINOS
+            TributeRequirement(itemName: 'Allosaurus Brain', quantity: 10, imagePath: 'assets/images/Dinos/Boss/Tributos/Allosaurus_Brain.webp'),
+            TributeRequirement(itemName: 'Basilosaurus Blubber', quantity: 10, imagePath: 'assets/images/Dinos/Boss/Tributos/Basilosaurus_Blubber.webp'),
+            TributeRequirement(itemName: 'Giganotosaurus Heart', quantity: 10, imagePath: 'assets/images/Dinos/Boss/Tributos/Giganotosaurus_Heart.webp'),
+            TributeRequirement(itemName: 'Megalodon Tooth', quantity: 10, imagePath: 'assets/images/Dinos/Boss/Tributos/Megalodon_Tooth.webp'),
+            TributeRequirement(itemName: 'Tyrannosaurus Arm', quantity: 10, imagePath: 'assets/images/Dinos/Boss/Tributos/Tyrannosaurus_Arm.webp'),
+            TributeRequirement(itemName: 'Yutyrannus Lungs', quantity: 10, imagePath: 'assets/images/Dinos/Boss/Tributos/Yutyrannus_Lungs.webp'),
+            // ARTEFACTOS
+            TributeRequirement(itemName: 'Artifact of the Cunning', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Cunning.webp'),
+            TributeRequirement(itemName: 'Artifact of the Immune', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Immune.webp'),
+            TributeRequirement(itemName: 'Artifact of the Skylord', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Skylord.webp'),
+            TributeRequirement(itemName: 'Artifact of the Strong', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Strong.webp'),
           ],
         ),
       ],
@@ -83,13 +88,12 @@ final List<Dinosaur> bossDinos = [
   Dinosaur(
     name: 'Broodmother Lysrix',
     categories: ['boses', 'the_island'],
-    imagePaths: ['assets/images/Dinos/Bosses/Broodmother.webp'],
+    imagePaths: ['assets/images/Dinos/Boss/Broodmother.webp'],
     description: 'Una araña gigante que invoca hordas de Araneos. Es uno de los primeros jefes que los supervivientes suelen enfrentar.',
 
-    // Configuración de Combate
     isMountable: false,
     damageBase: 100,
-    healthBase: 216000, // HP del nivel Gamma
+    healthBase: 216000,
     preferredFoods: [],
     torporDrainInfo: 'Inmune',
     isShoulderPet: false,
@@ -103,11 +107,13 @@ final List<Dinosaur> bossDinos = [
           healthBase: 216000,
           elementReward: 200,
           requiredTributes: [
-            TributeRequirement(itemName: 'Titanoboa Venom', quantity: 1, imagePath: 'assets/icons/tribute/titanoboa_venom.png'),
-            TributeRequirement(itemName: 'Artifact of the Hunter', quantity: 1, imagePath: 'assets/icons/tribute/artifact_hunter.png'),
-            TributeRequirement(itemName: 'Artifact of the Clever', quantity: 1, imagePath: 'assets/icons/tribute/artifact_clever.png'),
-            TributeRequirement(itemName: 'Artifact of the Massive', quantity: 1, imagePath: 'assets/icons/tribute/artifact_massive.png'),
-            TributeRequirement(itemName: 'Artifact of the Pack', quantity: 1, imagePath: 'assets/icons/tribute/artifact_pack.png'),
+            // PARTES DE DINOS
+            TributeRequirement(itemName: 'Sarcosuchus Skin', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Sarcosuchus_Skin.webp'),
+            // ARTEFACTOS
+            TributeRequirement(itemName: 'Artifact of the Hunter', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Hunter.webp'),
+            TributeRequirement(itemName: 'Artifact of the Clever', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Clever.webp'),
+            TributeRequirement(itemName: 'Artifact of the Massive', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Massive.webp'),
+            TributeRequirement(itemName: 'Artifact of the Pack', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Pack.webp'),
           ],
         ),
         BossDifficulty(
@@ -116,17 +122,18 @@ final List<Dinosaur> bossDinos = [
           healthBase: 432000,
           elementReward: 400,
           requiredTributes: [
-            TributeRequirement(itemName: 'Sarcosuchus Skin', quantity: 5, imagePath: 'assets/icons/tribute/sarco_skin.png'),
-            TributeRequirement(itemName: 'Megalodon Tooth', quantity: 5, imagePath: 'assets/icons/tribute/megalodon_tooth.png'),
-            TributeRequirement(itemName: 'Argentavis Talon', quantity: 5, imagePath: 'assets/icons/tribute/argie_talon.png'),
-            TributeRequirement(itemName: 'Revenant Bone', quantity: 5, imagePath: 'assets/icons/tribute/revenant_bone.png'),
-            TributeRequirement(itemName: 'Titanoboa Venom', quantity: 5, imagePath: 'assets/icons/tribute/titanoboa_venom.png'),
-            TributeRequirement(itemName: 'Sauropod Vertebra', quantity: 5, imagePath: 'assets/icons/tribute/sauropod_vertebra.png'),
-            // Artefactos
-            TributeRequirement(itemName: 'Artifact of the Hunter', quantity: 1, imagePath: 'assets/icons/tribute/artifact_hunter.png'),
-            TributeRequirement(itemName: 'Artifact of the Clever', quantity: 1, imagePath: 'assets/icons/tribute/artifact_clever.png'),
-            TributeRequirement(itemName: 'Artifact of the Massive', quantity: 1, imagePath: 'assets/icons/tribute/artifact_massive.png'),
-            TributeRequirement(itemName: 'Artifact of the Pack', quantity: 1, imagePath: 'assets/icons/tribute/artifact_pack.png'),
+            // PARTES DE DINOS
+            TributeRequirement(itemName: 'Argentavis Talon', quantity: 5, imagePath: 'assets/images/Dinos/Boss/Tributos/Argentavis_Talon.webp'),
+            TributeRequirement(itemName: 'Megalania Toxin', quantity: 5, imagePath: 'assets/images/Dinos/Boss/Tributos/Megalania_Toxin.webp'),
+            TributeRequirement(itemName: 'Spinosaurus Sail', quantity: 5, imagePath: 'assets/images/Dinos/Boss/Tributos/Spinosaurus_Sail.webp'),
+            TributeRequirement(itemName: 'Therizino Claws', quantity: 5, imagePath: 'assets/images/Dinos/Boss/Tributos/Therizino_Claws.webp'),
+            TributeRequirement(itemName: 'Titanoboa Venom', quantity: 5, imagePath: 'assets/images/Dinos/Boss/Tributos/Titanoboa_Venom.webp'),
+            TributeRequirement(itemName: 'Tyrannosaurus Arm', quantity: 5, imagePath: 'assets/images/Dinos/Boss/Tributos/Tyrannosaurus_Arm.webp'),
+            // ARTEFACTOS
+            TributeRequirement(itemName: 'Artifact of the Hunter', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Hunter.webp'),
+            TributeRequirement(itemName: 'Artifact of the Clever', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Clever.webp'),
+            TributeRequirement(itemName: 'Artifact of the Massive', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Massive.webp'),
+            TributeRequirement(itemName: 'Artifact of the Pack', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Pack.webp'),
           ],
         ),
         BossDifficulty(
@@ -135,17 +142,18 @@ final List<Dinosaur> bossDinos = [
           healthBase: 648000,
           elementReward: 500,
           requiredTributes: [
-            TributeRequirement(itemName: 'Sarcosuchus Skin', quantity: 10, imagePath: 'assets/icons/tribute/sarco_skin.png'),
-            TributeRequirement(itemName: 'Megalodon Tooth', quantity: 10, imagePath: 'assets/icons/tribute/megalodon_tooth.png'),
-            TributeRequirement(itemName: 'Argentavis Talon', quantity: 10, imagePath: 'assets/icons/tribute/argie_talon.png'),
-            TributeRequirement(itemName: 'Revenant Bone', quantity: 10, imagePath: 'assets/icons/tribute/revenant_bone.png'),
-            TributeRequirement(itemName: 'Titanoboa Venom', quantity: 10, imagePath: 'assets/icons/tribute/titanoboa_venom.png'),
-            TributeRequirement(itemName: 'Sauropod Vertebra', quantity: 10, imagePath: 'assets/icons/tribute/sauropod_vertebra.png'),
-            // Artefactos
-            TributeRequirement(itemName: 'Artifact of the Hunter', quantity: 1, imagePath: 'assets/icons/tribute/artifact_hunter.png'),
-            TributeRequirement(itemName: 'Artifact of the Clever', quantity: 1, imagePath: 'assets/icons/tribute/artifact_clever.png'),
-            TributeRequirement(itemName: 'Artifact of the Massive', quantity: 1, imagePath: 'assets/icons/tribute/artifact_massive.png'),
-            TributeRequirement(itemName: 'Artifact of the Pack', quantity: 1, imagePath: 'assets/icons/tribute/artifact_pack.png'),
+            // PARTES DE DINOS
+            TributeRequirement(itemName: 'Argentavis Talon', quantity: 10, imagePath: 'assets/images/Dinos/Boss/Tributos/Argentavis_Talon.webp'),
+            TributeRequirement(itemName: 'Megalania Toxin', quantity: 10, imagePath: 'assets/images/Dinos/Boss/Tributos/Megalania_Toxin.webp'),
+            TributeRequirement(itemName: 'Spinosaurus Sail', quantity: 10, imagePath: 'assets/images/Dinos/Boss/Tributos/Spinosaurus_Sail.webp'),
+            TributeRequirement(itemName: 'Therizino Claws', quantity: 10, imagePath: 'assets/images/Dinos/Boss/Tributos/Therizino_Claws.webp'),
+            TributeRequirement(itemName: 'Titanoboa Venom', quantity: 10, imagePath: 'assets/images/Dinos/Boss/Tributos/Titanoboa_Venom.webp'),
+            TributeRequirement(itemName: 'Tyrannosaurus Arm', quantity: 10, imagePath: 'assets/images/Dinos/Boss/Tributos/Tyrannosaurus_Arm.webp'),
+            // ARTEFACTOS
+            TributeRequirement(itemName: 'Artifact of the Hunter', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Hunter.webp'),
+            TributeRequirement(itemName: 'Artifact of the Clever', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Clever.webp'),
+            TributeRequirement(itemName: 'Artifact of the Massive', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Massive.webp'),
+            TributeRequirement(itemName: 'Artifact of the Pack', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Pack.webp'),
           ],
         ),
       ],
@@ -158,13 +166,12 @@ final List<Dinosaur> bossDinos = [
   Dinosaur(
     name: 'Megapithecus',
     categories: ['boses', 'the_island'],
-    imagePaths: ['assets/images/Dinos/Bosses/Megapithecus.webp'],
+    imagePaths: ['assets/images/Dinos/Boss/Megapithecus.webp'],
     description: 'Un gorila gigante y poderoso que lanza rocas y tiene una gran salud. Se invoca en un obelisco.',
 
-    // Configuración de Combate
     isMountable: false,
     damageBase: 300,
-    healthBase: 180000, // HP del nivel Gamma
+    healthBase: 180000,
     preferredFoods: [],
     torporDrainInfo: 'Inmune',
     isShoulderPet: false,
@@ -178,11 +185,13 @@ final List<Dinosaur> bossDinos = [
           healthBase: 180000,
           elementReward: 200,
           requiredTributes: [
-            TributeRequirement(itemName: 'Tusoteuthis Tentacle', quantity: 1, imagePath: 'assets/icons/tribute/tuso_tentacle.png'),
-            TributeRequirement(itemName: 'Artifact of the Destroyer', quantity: 1, imagePath: 'assets/icons/tribute/artifact_destroyer.png'),
-            TributeRequirement(itemName: 'Artifact of the Gatekeeper', quantity: 1, imagePath: 'assets/icons/tribute/artifact_gatekeeper.png'),
-            TributeRequirement(itemName: 'Artifact of the Brute', quantity: 1, imagePath: 'assets/icons/tribute/artifact_brute.png'),
-            TributeRequirement(itemName: 'Artifact of the Lower Caverns', quantity: 1, imagePath: 'assets/icons/tribute/artifact_lower_caverns.png'),
+            // PARTES DE DINOS
+            TributeRequirement(itemName: 'Sauropod Vertebra', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Sauropod_Vertebra.webp'),
+            // ARTEFACTOS
+            TributeRequirement(itemName: 'Artifact of the Destroyer', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Destroyer.webp'),
+            TributeRequirement(itemName: 'Artifact of the Gatekeeper', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Gatekeeper.webp'),
+            TributeRequirement(itemName: 'Artifact of the Brute', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Brute.webp'),
+            TributeRequirement(itemName: 'Artifact of the Lower Caverns', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Lower_Caverns.webp'),
           ],
         ),
         BossDifficulty(
@@ -191,17 +200,18 @@ final List<Dinosaur> bossDinos = [
           healthBase: 360000,
           elementReward: 400,
           requiredTributes: [
-            TributeRequirement(itemName: 'Tyrannosaurus Arm', quantity: 5, imagePath: 'assets/icons/tribute/rex_arm.png'),
-            TributeRequirement(itemName: 'Megalodon Tooth', quantity: 5, imagePath: 'assets/icons/tribute/megalodon_tooth.png'),
-            TributeRequirement(itemName: 'Giganotosaurus Heart', quantity: 5, imagePath: 'assets/icons/tribute/giga_heart.png'),
-            TributeRequirement(itemName: 'Sauropod Vertebra', quantity: 5, imagePath: 'assets/icons/tribute/sauropod_vertebra.png'),
-            TributeRequirement(itemName: 'Tusoteuthis Tentacle', quantity: 5, imagePath: 'assets/icons/tribute/tuso_tentacle.png'),
-            TributeRequirement(itemName: 'Yutyrannus Lungs', quantity: 5, imagePath: 'assets/icons/tribute/yuty_lungs.png'),
-            // Artefactos
-            TributeRequirement(itemName: 'Artifact of the Destroyer', quantity: 1, imagePath: 'assets/icons/tribute/artifact_destroyer.png'),
-            TributeRequirement(itemName: 'Artifact of the Gatekeeper', quantity: 1, imagePath: 'assets/icons/tribute/artifact_gatekeeper.png'),
-            TributeRequirement(itemName: 'Artifact of the Brute', quantity: 1, imagePath: 'assets/icons/tribute/artifact_brute.png'),
-            TributeRequirement(itemName: 'Artifact of the Lower Caverns', quantity: 1, imagePath: 'assets/icons/tribute/artifact_lower_caverns.png'),
+            // PARTES DE DINOS
+            TributeRequirement(itemName: 'Allosaurus Brain', quantity: 5, imagePath: 'assets/images/Dinos/Boss/Tributos/Allosaurus_Brain.webp'),
+            TributeRequirement(itemName: 'Basilosaurus Blubber', quantity: 5, imagePath: 'assets/images/Dinos/Boss/Tributos/Basilosaurus_Blubber.webp'),
+            TributeRequirement(itemName: 'Giganotosaurus Heart', quantity: 5, imagePath: 'assets/images/Dinos/Boss/Tributos/Giganotosaurus_Heart.webp'),
+            TributeRequirement(itemName: 'Megalodon Tooth', quantity: 5, imagePath: 'assets/images/Dinos/Boss/Tributos/Megalodon_Tooth.webp'),
+            TributeRequirement(itemName: 'Tyrannosaurus Arm', quantity: 5, imagePath: 'assets/images/Dinos/Boss/Tributos/Tyrannosaurus_Arm.webp'),
+            TributeRequirement(itemName: 'Yutyrannus Lungs', quantity: 5, imagePath: 'assets/images/Dinos/Boss/Tributos/Yutyrannus_Lungs.webp'),
+            // ARTEFACTOS
+            TributeRequirement(itemName: 'Artifact of the Destroyer', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Destroyer.webp'),
+            TributeRequirement(itemName: 'Artifact of the Gatekeeper', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Gatekeeper.webp'),
+            TributeRequirement(itemName: 'Artifact of the Brute', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Brute.webp'),
+            TributeRequirement(itemName: 'Artifact of the Lower Caverns', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Lower_Caverns.webp'),
           ],
         ),
         BossDifficulty(
@@ -210,17 +220,18 @@ final List<Dinosaur> bossDinos = [
           healthBase: 540000,
           elementReward: 500,
           requiredTributes: [
-            TributeRequirement(itemName: 'Tyrannosaurus Arm', quantity: 10, imagePath: 'assets/icons/tribute/rex_arm.png'),
-            TributeRequirement(itemName: 'Megalodon Tooth', quantity: 10, imagePath: 'assets/icons/tribute/megalodon_tooth.png'),
-            TributeRequirement(itemName: 'Giganotosaurus Heart', quantity: 10, imagePath: 'assets/icons/tribute/giga_heart.png'),
-            TributeRequirement(itemName: 'Sauropod Vertebra', quantity: 10, imagePath: 'assets/icons/tribute/sauropod_vertebra.png'),
-            TributeRequirement(itemName: 'Tusoteuthis Tentacle', quantity: 10, imagePath: 'assets/icons/tribute/tuso_tentacle.png'),
-            TributeRequirement(itemName: 'Yutyrannus Lungs', quantity: 10, imagePath: 'assets/icons/tribute/yuty_lungs.png'),
-            // Artefactos
-            TributeRequirement(itemName: 'Artifact of the Destroyer', quantity: 1, imagePath: 'assets/icons/tribute/artifact_destroyer.png'),
-            TributeRequirement(itemName: 'Artifact of the Gatekeeper', quantity: 1, imagePath: 'assets/icons/tribute/artifact_gatekeeper.png'),
-            TributeRequirement(itemName: 'Artifact of the Brute', quantity: 1, imagePath: 'assets/icons/tribute/artifact_brute.png'),
-            TributeRequirement(itemName: 'Artifact of the Lower Caverns', quantity: 1, imagePath: 'assets/icons/tribute/artifact_lower_caverns.png'),
+            // PARTES DE DINOS
+            TributeRequirement(itemName: 'Allosaurus Brain', quantity: 10, imagePath: 'assets/images/Dinos/Boss/Tributos/Allosaurus_Brain.webp'),
+            TributeRequirement(itemName: 'Basilosaurus Blubber', quantity: 10, imagePath: 'assets/images/Dinos/Boss/Tributos/Basilosaurus_Blubber.webp'),
+            TributeRequirement(itemName: 'Giganotosaurus Heart', quantity: 10, imagePath: 'assets/images/Dinos/Boss/Tributos/Giganotosaurus_Heart.webp'),
+            TributeRequirement(itemName: 'Megalodon Tooth', quantity: 10, imagePath: 'assets/images/Dinos/Boss/Tributos/Megalodon_Tooth.webp'),
+            TributeRequirement(itemName: 'Tyrannosaurus Arm', quantity: 10, imagePath: 'assets/images/Dinos/Boss/Tributos/Tyrannosaurus_Arm.webp'),
+            TributeRequirement(itemName: 'Yutyrannus Lungs', quantity: 10, imagePath: 'assets/images/Dinos/Boss/Tributos/Yutyrannus_Lungs.webp'),
+            // ARTEFACTOS
+            TributeRequirement(itemName: 'Artifact of the Destroyer', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Destroyer.webp'),
+            TributeRequirement(itemName: 'Artifact of the Gatekeeper', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Gatekeeper.webp'),
+            TributeRequirement(itemName: 'Artifact of the Brute', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Brute.webp'),
+            TributeRequirement(itemName: 'Artifact of the Lower Caverns', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Lower_Caverns.webp'),
           ],
         ),
       ],
@@ -233,13 +244,12 @@ final List<Dinosaur> bossDinos = [
   Dinosaur(
     name: 'Overseer',
     categories: ['boses', 'the_island', 'final'],
-    imagePaths: ['assets/images/Dinos/Bosses/Overseer.webp'],
+    imagePaths: ['assets/images/Dinos/Boss/Overseer.webp'],
     description: 'El jefe final de The Island. Sólo se puede acceder después de vencer a los otros tres jefes en la misma dificultad.',
 
-    // Configuración de Combate
     isMountable: false,
     damageBase: 1000,
-    healthBase: 100000, // Su HP varía según la fase, este es un valor base simbólico.
+    healthBase: 100000,
     preferredFoods: [],
     torporDrainInfo: 'Inmune',
     isShoulderPet: false,
@@ -249,13 +259,15 @@ final List<Dinosaur> bossDinos = [
       difficulties: [
         BossDifficulty(
           difficultyName: 'Gamma',
-          levelUnlocked: 70, // Nivel de Engram final
+          levelUnlocked: 70,
           healthBase: 100000,
-          elementReward: 1500, // Recompensa alta por el jefe final
+          elementReward: 1500,
           requiredTributes: [
-            TributeRequirement(itemName: 'Trofeo de Broodmother (Gamma)', quantity: 1, imagePath: 'assets/icons/tribute/trophy_broodmother_gamma.png'),
-            TributeRequirement(itemName: 'Trofeo de Megapithecus (Gamma)', quantity: 1, imagePath: 'assets/icons/tribute/trophy_megapithecus_gamma.png'),
-            TributeRequirement(itemName: 'Trofeo del Dragón (Gamma)', quantity: 1, imagePath: 'assets/icons/tribute/trophy_dragon_gamma.png'),
+            // TROFEOS (RUTA DE BOSSES)
+            TributeRequirement(itemName: 'Dossier Rockwell', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Dossier_Rockwell.webp'),
+            TributeRequirement(itemName: 'Broodmother Trophy (Gamma)', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Broodmother.webp'),
+            TributeRequirement(itemName: 'Megapithecus Trophy (Gamma)', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Megapithecus.webp'),
+            TributeRequirement(itemName: 'Dragon Trophy (Gamma)', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Dragon.webp'),
           ],
         ),
         BossDifficulty(
@@ -264,9 +276,11 @@ final List<Dinosaur> bossDinos = [
           healthBase: 200000,
           elementReward: 3000,
           requiredTributes: [
-            TributeRequirement(itemName: 'Trofeo de Broodmother (Beta)', quantity: 1, imagePath: 'assets/icons/tribute/trophy_broodmother_beta.png'),
-            TributeRequirement(itemName: 'Trofeo de Megapithecus (Beta)', quantity: 1, imagePath: 'assets/icons/tribute/trophy_megapithecus_beta.png'),
-            TributeRequirement(itemName: 'Trofeo del Dragón (Beta)', quantity: 1, imagePath: 'assets/icons/tribute/trophy_dragon_beta.png'),
+            // TROFEOS (RUTA DE BOSSES)
+            TributeRequirement(itemName: 'Dossier Rockwell', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Dossier_Rockwell.webp'),
+            TributeRequirement(itemName: 'Broodmother Trophy (Beta)', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Broodmother.webp'),
+            TributeRequirement(itemName: 'Megapithecus Trophy (Beta)', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Megapithecus.webp'),
+            TributeRequirement(itemName: 'Dragon Trophy (Beta)', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Dragon.webp'),
           ],
         ),
         BossDifficulty(
@@ -275,9 +289,11 @@ final List<Dinosaur> bossDinos = [
           healthBase: 300000,
           elementReward: 5000,
           requiredTributes: [
-            TributeRequirement(itemName: 'Trofeo de Broodmother (Alpha)', quantity: 1, imagePath: 'assets/icons/tribute/trophy_broodmother_alpha.png'),
-            TributeRequirement(itemName: 'Trofeo de Megapithecus (Alpha)', quantity: 1, imagePath: 'assets/icons/tribute/trophy_megapithecus_alpha.png'),
-            TributeRequirement(itemName: 'Trofeo del Dragón (Alpha)', quantity: 1, imagePath: 'assets/icons/tribute/trophy_dragon_alpha.png'),
+            // TROFEOS (RUTA DE BOSSES)
+            TributeRequirement(itemName: 'Dossier Rockwell', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Dossier_Rockwell.webp'),
+            TributeRequirement(itemName: 'Broodmother Trophy (Alpha)', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Broodmother.webp'),
+            TributeRequirement(itemName: 'Megapithecus Trophy (Alpha)', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Megapithecus.webp'),
+            TributeRequirement(itemName: 'Dragon Trophy (Alpha)', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Dragon.webp'),
           ],
         ),
       ],
@@ -289,11 +305,10 @@ final List<Dinosaur> bossDinos = [
   // ----------------------------------------------------------------------
   Dinosaur(
     name: 'Manticore',
-    categories: ['boses', 'scorched_earth'],
-    imagePaths: ['assets/images/Dinos/Bosses/Manticora.webp'],
+    categories: ['boses', 'scorched_earth', 'volaores'],
+    imagePaths: ['assets/images/Dinos/Boss/Manticora.webp'],
     description: 'El jefe final de Scorched Earth. Una criatura híbrida que ataca con proyectiles paralizantes y ataques aéreos.',
 
-    // Configuración de Combate
     isMountable: false,
     damageBase: 300,
     healthBase: 120000,
@@ -310,12 +325,14 @@ final List<Dinosaur> bossDinos = [
           healthBase: 120000,
           elementReward: 200,
           requiredTributes: [
-            TributeRequirement(itemName: 'Artifact of the Crag', quantity: 1, imagePath: 'assets/icons/tribute/artifact_crag.png'),
-            TributeRequirement(itemName: 'Artifact of the Destroyer', quantity: 1, imagePath: 'assets/icons/tribute/artifact_destroyer.png'),
-            TributeRequirement(itemName: 'Artifact of the Gatekeeper', quantity: 1, imagePath: 'assets/icons/tribute/artifact_gatekeeper.png'),
-            TributeRequirement(itemName: 'Thylacoleo Hook-Claw', quantity: 5, imagePath: 'assets/icons/tribute/thyla_claw.png'),
-            TributeRequirement(itemName: 'Mantis Claw', quantity: 5, imagePath: 'assets/icons/tribute/mantis_claw.png'),
-            TributeRequirement(itemName: 'Deathworm Horn', quantity: 5, imagePath: 'assets/icons/tribute/deathworm_horn.png'),
+            // ARTEFACTOS
+            TributeRequirement(itemName: 'Artifact of the Crag', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Crag.webp'),
+            TributeRequirement(itemName: 'Artifact of the Destroyer', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Destroyer.webp'),
+            TributeRequirement(itemName: 'Artifact of the Gatekeeper', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Gatekeeper.webp'),
+            // PARTES DE DINOS
+            TributeRequirement(itemName: 'Mantis Claw', quantity: 5, imagePath: 'assets/images/Dinos/Boss/Tributos/Mantis_Claw.webp'),
+            TributeRequirement(itemName: 'Deathworm Horn', quantity: 5, imagePath: 'assets/images/Dinos/Boss/Tributos/Deathworm_Horn.webp'),
+            TributeRequirement(itemName: 'Thylacoleo Hook-Claw', quantity: 5, imagePath: 'assets/images/Dinos/Boss/Tributos/Thylacoleo_Hook-Claw.webp'),
           ],
         ),
         BossDifficulty(
@@ -324,12 +341,14 @@ final List<Dinosaur> bossDinos = [
           healthBase: 240000,
           elementReward: 400,
           requiredTributes: [
-            TributeRequirement(itemName: 'Artifact of the Crag', quantity: 1, imagePath: 'assets/icons/tribute/artifact_crag.png'),
-            TributeRequirement(itemName: 'Artifact of the Destroyer', quantity: 1, imagePath: 'assets/icons/tribute/artifact_destroyer.png'),
-            TributeRequirement(itemName: 'Artifact of the Gatekeeper', quantity: 1, imagePath: 'assets/icons/tribute/artifact_gatekeeper.png'),
-            TributeRequirement(itemName: 'Thylacoleo Hook-Claw', quantity: 10, imagePath: 'assets/icons/tribute/thyla_claw.png'),
-            TributeRequirement(itemName: 'Mantis Claw', quantity: 10, imagePath: 'assets/icons/tribute/mantis_claw.png'),
-            TributeRequirement(itemName: 'Deathworm Horn', quantity: 10, imagePath: 'assets/icons/tribute/deathworm_horn.png'),
+            // ARTEFACTOS
+            TributeRequirement(itemName: 'Artifact of the Crag', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Crag.webp'),
+            TributeRequirement(itemName: 'Artifact of the Destroyer', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Destroyer.webp'),
+            TributeRequirement(itemName: 'Artifact of the Gatekeeper', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Gatekeeper.webp'),
+            // PARTES DE DINOS
+            TributeRequirement(itemName: 'Mantis Claw', quantity: 10, imagePath: 'assets/images/Dinos/Boss/Tributos/Mantis_Claw.webp'),
+            TributeRequirement(itemName: 'Deathworm Horn', quantity: 10, imagePath: 'assets/images/Dinos/Boss/Tributos/Deathworm_Horn.webp'),
+            TributeRequirement(itemName: 'Thylacoleo Hook-Claw', quantity: 10, imagePath: 'assets/images/Dinos/Boss/Tributos/Thylacoleo_Hook-Claw.webp'),
           ],
         ),
         BossDifficulty(
@@ -338,12 +357,14 @@ final List<Dinosaur> bossDinos = [
           healthBase: 360000,
           elementReward: 500,
           requiredTributes: [
-            TributeRequirement(itemName: 'Artifact of the Crag', quantity: 1, imagePath: 'assets/icons/tribute/artifact_crag.png'),
-            TributeRequirement(itemName: 'Artifact of the Destroyer', quantity: 1, imagePath: 'assets/icons/tribute/artifact_destroyer.png'),
-            TributeRequirement(itemName: 'Artifact of the Gatekeeper', quantity: 1, imagePath: 'assets/icons/tribute/artifact_gatekeeper.png'),
-            TributeRequirement(itemName: 'Thylacoleo Hook-Claw', quantity: 20, imagePath: 'assets/icons/tribute/thyla_claw.png'),
-            TributeRequirement(itemName: 'Mantis Claw', quantity: 20, imagePath: 'assets/icons/tribute/mantis_claw.png'),
-            TributeRequirement(itemName: 'Deathworm Horn', quantity: 20, imagePath: 'assets/icons/tribute/deathworm_horn.png'),
+            // ARTEFACTOS
+            TributeRequirement(itemName: 'Artifact of the Crag', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Crag.webp'),
+            TributeRequirement(itemName: 'Artifact of the Destroyer', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Destroyer.webp'),
+            TributeRequirement(itemName: 'Artifact of the Gatekeeper', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Gatekeeper.webp'),
+            // PARTES DE DINOS
+            TributeRequirement(itemName: 'Mantis Claw', quantity: 20, imagePath: 'assets/images/Dinos/Boss/Tributos/Mantis_Claw.webp'),
+            TributeRequirement(itemName: 'Deathworm Horn', quantity: 20, imagePath: 'assets/images/Dinos/Boss/Tributos/Deathworm_Horn.webp'),
+            TributeRequirement(itemName: 'Thylacoleo Hook-Claw', quantity: 20, imagePath: 'assets/images/Dinos/Boss/Tributos/Thylacoleo_Hook-Claw.webp'),
           ],
         ),
       ],
@@ -356,13 +377,12 @@ final List<Dinosaur> bossDinos = [
   Dinosaur(
     name: 'Rockwell',
     categories: ['boses', 'aberration', 'final'],
-    imagePaths: ['assets/images/Dinos/Bosses/Rockwell.webp'],
+    imagePaths: ['assets/images/Dinos/Boss/Rockwell.webp'],
     description: 'El jefe final de Aberration. Requiere una estrategia compleja para exponer su corazón.',
 
-    // Configuración de Combate
     isMountable: false,
     damageBase: 1000,
-    healthBase: 150000, // HP del nivel Gamma
+    healthBase: 150000,
     preferredFoods: [],
     torporDrainInfo: 'Inmune',
     isShoulderPet: false,
@@ -376,12 +396,14 @@ final List<Dinosaur> bossDinos = [
           healthBase: 150000,
           elementReward: 200,
           requiredTributes: [
-            TributeRequirement(itemName: 'Artifact of the Depths', quantity: 1, imagePath: 'assets/icons/tribute/artifact_depths.png'),
-            TributeRequirement(itemName: 'Artifact of the Shadows', quantity: 1, imagePath: 'assets/icons/tribute/artifact_shadows.png'),
-            TributeRequirement(itemName: 'Artifact of the Stalker', quantity: 1, imagePath: 'assets/icons/tribute/artifact_stalker.png'),
-            TributeRequirement(itemName: 'Basilisk Scale', quantity: 5, imagePath: 'assets/icons/tribute/basilisk_scale.png'),
-            TributeRequirement(itemName: 'Karkinos Claw', quantity: 5, imagePath: 'assets/icons/tribute/karkinos_claw.png'),
-            TributeRequirement(itemName: 'Reaper King Barb', quantity: 5, imagePath: 'assets/icons/tribute/reaper_barb.png'),
+            // ARTEFACTOS
+            TributeRequirement(itemName: 'Artifact of the Depths', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Depths.webp'),
+            TributeRequirement(itemName: 'Artifact of the Shadows', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Shadows.webp'),
+            TributeRequirement(itemName: 'Artifact of the Stalker', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Stalker.webp'),
+            // PARTES DE DINOS
+            TributeRequirement(itemName: 'Basilisk Scale', quantity: 5, imagePath: 'assets/images/Dinos/Boss/Tributos/Basilisk_Scale.webp'),
+            TributeRequirement(itemName: 'Karkinos Claw', quantity: 5, imagePath: 'assets/images/Dinos/Boss/Tributos/Alpha_Karkinos_Claw.webp'),
+            TributeRequirement(itemName: 'Reaper King Barb', quantity: 5, imagePath: 'assets/images/Dinos/Boss/Tributos/Alpha_Reaper_King_Barb.webp'),
           ],
         ),
         BossDifficulty(
@@ -390,12 +412,14 @@ final List<Dinosaur> bossDinos = [
           healthBase: 300000,
           elementReward: 400,
           requiredTributes: [
-            TributeRequirement(itemName: 'Artifact of the Depths', quantity: 1, imagePath: 'assets/icons/tribute/artifact_depths.png'),
-            TributeRequirement(itemName: 'Artifact of the Shadows', quantity: 1, imagePath: 'assets/icons/tribute/artifact_shadows.png'),
-            TributeRequirement(itemName: 'Artifact of the Stalker', quantity: 1, imagePath: 'assets/icons/tribute/artifact_stalker.png'),
-            TributeRequirement(itemName: 'Basilisk Scale', quantity: 10, imagePath: 'assets/icons/tribute/basilisk_scale.png'),
-            TributeRequirement(itemName: 'Karkinos Claw', quantity: 10, imagePath: 'assets/icons/tribute/karkinos_claw.png'),
-            TributeRequirement(itemName: 'Reaper King Barb', quantity: 10, imagePath: 'assets/icons/tribute/reaper_barb.png'),
+            // ARTEFACTOS
+            TributeRequirement(itemName: 'Artifact of the Depths', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Depths.webp'),
+            TributeRequirement(itemName: 'Artifact of the Shadows', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Shadows.webp'),
+            TributeRequirement(itemName: 'Artifact of the Stalker', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Stalker.webp'),
+            // PARTES DE DINOS
+            TributeRequirement(itemName: 'Basilisk Scale', quantity: 10, imagePath: 'assets/images/Dinos/Boss/Tributos/Basilisk_Scale.webp'),
+            TributeRequirement(itemName: 'Karkinos Claw', quantity: 10, imagePath: 'assets/images/Dinos/Boss/Tributos/Alpha_Karkinos_Claw.webp'),
+            TributeRequirement(itemName: 'Reaper King Barb', quantity: 10, imagePath: 'assets/images/Dinos/Boss/Tributos/Alpha_Reaper_King_Barb.webp'),
           ],
         ),
         BossDifficulty(
@@ -404,12 +428,14 @@ final List<Dinosaur> bossDinos = [
           healthBase: 450000,
           elementReward: 500,
           requiredTributes: [
-            TributeRequirement(itemName: 'Artifact of the Depths', quantity: 1, imagePath: 'assets/icons/tribute/artifact_depths.png'),
-            TributeRequirement(itemName: 'Artifact of the Shadows', quantity: 1, imagePath: 'assets/icons/tribute/artifact_shadows.png'),
-            TributeRequirement(itemName: 'Artifact of the Stalker', quantity: 1, imagePath: 'assets/icons/tribute/artifact_stalker.png'),
-            TributeRequirement(itemName: 'Basilisk Scale', quantity: 20, imagePath: 'assets/icons/tribute/basilisk_scale.png'),
-            TributeRequirement(itemName: 'Karkinos Claw', quantity: 20, imagePath: 'assets/icons/tribute/karkinos_claw.png'),
-            TributeRequirement(itemName: 'Reaper King Barb', quantity: 20, imagePath: 'assets/icons/tribute/reaper_barb.png'),
+            // ARTEFACTOS
+            TributeRequirement(itemName: 'Artifact of the Depths', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Depths.webp'),
+            TributeRequirement(itemName: 'Artifact of the Shadows', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Shadows.webp'),
+            TributeRequirement(itemName: 'Artifact of the Stalker', quantity: 1, imagePath: 'assets/images/Dinos/Boss/Tributos/Artifact/Artifact_of_the_Stalker.webp'),
+            // PARTES DE DINOS
+            TributeRequirement(itemName: 'Basilisk Scale', quantity: 20, imagePath: 'assets/images/Dinos/Boss/Tributos/Basilisk_Scale.webp'),
+            TributeRequirement(itemName: 'Karkinos Claw', quantity: 20, imagePath: 'assets/images/Dinos/Boss/Tributos/Alpha_Karkinos_Claw.webp'),
+            TributeRequirement(itemName: 'Reaper King Barb', quantity: 20, imagePath: 'assets/images/Dinos/Boss/Tributos/Alpha_Reaper_King_Barb.webp'),
           ],
         ),
       ],

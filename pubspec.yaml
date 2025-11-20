@@ -43,7 +43,7 @@ flutter:
     - assets/images/
     - assets/images/Consumibles/
     - assets/images/Tintes/
-    - assets/images/Logo_ascendend.png
+    - assets/images/logo_ascendend.webp
     - assets/images/Dinos/Voladores/
     - assets/images/Dinos/Melee/
     - assets/images/Dinos/Acuaticos/
@@ -51,6 +51,9 @@ flutter:
     - assets/images/Recurso/
     - assets/images/Mapas/
     - assets/images/kibbles/
+    - assets/images/Dinos/Boss/
+    - assets/images/Dinos/Boss/Tributos/
+    - assets/images/Dinos/Boss/Tributos/Artifact/
 
   # https://flutter.dev/to/resolution-aware-images
 

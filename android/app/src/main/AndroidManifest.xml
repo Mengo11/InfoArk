@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="ark_calculator"
+        android:label="InfoArk"
         android:name="${applicationName}"
-        android:icon="@mipmap/Logo_ascendend">
+        android:icon="@mipmap/logo_ascendend">
         <activity
             android:name=".MainActivity"
             android:exported="true"
